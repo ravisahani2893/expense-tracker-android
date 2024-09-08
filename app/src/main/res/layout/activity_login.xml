@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_height="@dimen/_70sdp"
+        android:layout_width="wrap_content"
+        app:srcCompat="@drawable/logo"
+        android:layout_above="@+id/ll_signin"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_35sdp"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_signin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <EditText
+            android:background="@drawable/bg_curved_edit_text"
+            android:id="@+id/et_user_employee_code"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:hint="Username"
+            android:textColorHint="@color/color_696969"
+            android:textColor="#000000"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:textSize="12sp" />
+
+        <EditText
+            android:background="@drawable/bg_curved_edit_text"
+            android:id="@+id/et_user_password"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:textColorHint="@color/color_696969"
+            android:textColor="#000000"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:textSize="12sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_forgot_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot password?"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:textColor="#2761ce"
+            android:paddingTop="@dimen/_12sdp"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="visible"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingStart="@dimen/_10sdp"
+
+            />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_login"
+            android:layout_width="@dimen/_160sdp"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/_30sdp"
+            android:text="Login"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_18sdp"
+            android:textSize="@dimen/_14sdp"
+            android:background="@drawable/bg_curved_signin_btn"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>
