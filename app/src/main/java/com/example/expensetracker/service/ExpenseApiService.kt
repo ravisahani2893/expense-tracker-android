@@ -3,8 +3,8 @@ package  com.example.expensetracker.service
 
 import androidx.lifecycle.LiveData
 import com.example.expensetracker.model.expense.ExpenseResponseItem
-import com.example.expensetracker.model.expense.create.ExpenseRequest
-import com.example.expensetracker.model.expense.create.ExpenseResponse
+import com.example.expensetracker.model.expense.create.request.ExpenseRequest
+import com.example.expensetracker.model.expense.create.response.ExpenseResponse
 import com.example.expensetracker.network.model.DataResponse
 import retrofit2.http.Body
 import retrofit2.http.GET

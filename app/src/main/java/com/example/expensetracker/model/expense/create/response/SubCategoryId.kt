@@ -1,4 +1,4 @@
-package com.example.expensetracker.model.expense.create
+package com.example.expensetracker.model.expense.create.response
 
 import com.fasterxml.jackson.annotation.JsonProperty
 

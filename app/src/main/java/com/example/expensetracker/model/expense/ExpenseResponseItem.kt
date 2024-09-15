@@ -29,5 +29,8 @@ data class ExpenseResponseItem(
     val updatedAt: String? = null,
 
     @field:JsonProperty("expenseDate")
-    val expenseDate: String? = null
+    val expenseDate: String? = null,
+
+    @field:JsonProperty("expenseTime")
+    val expenseTime: String? = null
 )

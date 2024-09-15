@@ -50,9 +50,11 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_expense"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
+                android:layout_height="match_parent"
+                android:background="@color/white_silver"
+                />
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/add_alarm_fab"
+                android:id="@+id/add_expense"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:contentDescription="Add Expense"
@@ -68,14 +70,13 @@
 
 
     <com.google.android.material.navigation.NavigationView
-        android:id="@+id/add_expense"
+        android:id="@+id/nav_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:choiceMode="singleChoice"
         android:fitsSystemWindows="true"
         android:visibility="visible">
-
         <include layout="@layout/layout_nav_bar" />
 
     </com.google.android.material.navigation.NavigationView>

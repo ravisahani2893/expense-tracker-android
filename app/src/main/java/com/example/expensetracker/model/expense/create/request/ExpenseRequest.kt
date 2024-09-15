@@ -1,24 +1,25 @@
-package com.example.expensetracker.model.expense.create
+package com.example.expensetracker.model.expense.create.request
 
 import com.fasterxml.jackson.annotation.JsonProperty
+import java.util.Date
 
 data class ExpenseRequest(
 
 	@field:JsonProperty("amount")
-	val amount: Int? = null,
+	var amount: Int? = null,
 
 	@field:JsonProperty("paymentId")
-	val paymentId: Int? = null,
+	var paymentId: Int? = null,
 
 	@field:JsonProperty("expenseDescription")
-	val expenseDescription: String? = null,
+	var expenseDescription: String? = null,
 
 	@field:JsonProperty("subCategoryId")
-	val subCategoryId: Int? = null,
+	var subCategoryId: Int? = null,
 
 	@field:JsonProperty("categoryId")
-	val categoryId: Int? = null,
+	var categoryId: Int? = null,
 
 	@field:JsonProperty("expenseDate")
-	val expenseDate: String? = null
+	var expenseDate: String? = null
 )

@@ -30,10 +30,7 @@ public class AppUtils {
         hideProgressDialog();
         if (context != null) {
             try {
-                progressDialog = new LoadingDialog(context);
-                progressDialog.setCanceledOnTouchOutside(true);
-                progressDialog.setCancelable(isCancelable);
-                progressDialog.show();
+                progressDialog= new LoadingDialog(context).showProgressDialog(isCancelable);
             } catch (Exception e) {
                 e.printStackTrace();
             }

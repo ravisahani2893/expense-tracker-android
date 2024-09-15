@@ -13,13 +13,15 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.expensetracker.adapter.ExpenseAdapter
 import com.example.expensetracker.databinding.ActivityHomeScreenBinding
+import com.example.expensetracker.fragment.AddExpenseDialogFragment
+import com.example.expensetracker.listener.OnExpenseAddListener
 import com.example.expensetracker.model.expense.ExpenseResponseItem
 import com.example.expensetracker.network.model.DataResponse
 import com.example.expensetracker.utils.AppUtils
 import com.example.expensetracker.viewmodel.MainActivityViewModel
 
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity(), OnExpenseAddListener {
 
     private lateinit var binding: ActivityHomeScreenBinding
 
@@ -41,6 +43,15 @@ class HomeActivity : AppCompatActivity() {
 
     private fun initListener(){
         onBackPressedDispatcher.addCallback(this,onBackPressedCallback)
+
+        binding.addExpense.setOnClickListener {
+            launchAddExpenseDialogFragment()
+        }
+    }
+
+    private fun launchAddExpenseDialogFragment(){
+        val dialogFragment = AddExpenseDialogFragment()
+        dialogFragment.show(supportFragmentManager,"AddExpenseDialogFragment")
     }
 
     private fun initViewModel(){
@@ -101,7 +112,7 @@ class HomeActivity : AppCompatActivity() {
             when (it.status) {
 
                 DataResponse.Status.LOADING -> {
-                    AppUtils.showProgressDialog(this, false)
+                    AppUtils.showProgressDialog(baseContext, false)
                 }
 
                 DataResponse.Status.ERROR -> {
@@ -122,6 +133,10 @@ class HomeActivity : AppCompatActivity() {
 
             }
         }
+    }
+
+    override fun onExpenseAdded() {
+        getExpenseList()
     }
 
 }

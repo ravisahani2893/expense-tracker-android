@@ -8,6 +8,7 @@ object Provider {
     private var expenseApiService: ExpenseApiService? = null
     private var categoryApiService: CategoryApiService? = null
     private var subCategoryApiService: SubCategoryApiService? = null
+    private var paymentTypeApiService: PaymentTypeApiService? = null
 
     fun getLoginService() : LoginApiService {
         if(loginApiService == null){
@@ -38,6 +39,14 @@ object Provider {
             return RetrofitFactory.createService(SubCategoryApiService::class.java)
         }
         return subCategoryApiService!!
+
+    }
+
+    fun getPaymentTypeService() : PaymentTypeApiService {
+        if(paymentTypeApiService == null){
+            return RetrofitFactory.createService(PaymentTypeApiService::class.java)
+        }
+        return paymentTypeApiService!!
 
     }
 }

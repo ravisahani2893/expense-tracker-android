@@ -16,7 +16,13 @@ data class ExpenseViewHolder(val binding: LayoutExpenseDetailBinding) : Recycler
         binding.tvExpenseAmount.text = binding.root.context.getString(R.string.rupee) + " "+data.expenseAmount
         binding.tvExpensePayment.text=data.paymentType
         binding.tvExpenseDesc.text=data.expenseDescription
-//        val date = DateUtils.formatDate("E, dd MMM yyyy HH:mm:ss", data.expenseDate!!)
-//        binding.tvExpenseDate.text = date
+        if(data.expenseDate != null){
+            val date = DateUtils.formatDateTime(data.expenseDate,DateUtils.PATTERN_DATE)
+            binding.tvExpenseDate.text = date
+        }
+
+        if(data.expenseTime != null){
+            binding.tvExpenseDateTime.text = data.expenseTime
+        }
     }
 }

@@ -2,8 +2,8 @@ package com.example.expensetracker.manager.expense
 
 import androidx.lifecycle.LiveData
 import com.example.expensetracker.model.expense.ExpenseResponseItem
-import com.example.expensetracker.model.expense.create.ExpenseRequest
-import com.example.expensetracker.model.expense.create.ExpenseResponse
+import com.example.expensetracker.model.expense.create.request.ExpenseRequest
+import com.example.expensetracker.model.expense.create.response.ExpenseResponse
 import com.example.expensetracker.network.helper.NetworkResource
 import com.example.expensetracker.network.model.DataResponse
 

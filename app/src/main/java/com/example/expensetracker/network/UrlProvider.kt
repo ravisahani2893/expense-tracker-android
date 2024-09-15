@@ -61,4 +61,15 @@ object UrlProvider {
 
     }
 
+    fun getPaymentTypeUrl() : String{
+
+        val uri = Uri.parse(UrlConstant.BASE_URL)
+            .buildUpon()
+            .appendPath("api")
+            .appendPath("paymenttype")
+            .build()
+        return uri.toString()
+
+    }
+
 }

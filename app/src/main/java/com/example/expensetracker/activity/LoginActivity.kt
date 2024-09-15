@@ -81,7 +81,7 @@ class LoginActivity : AppCompatActivity(),View.OnClickListener {
                 when (it.status) {
 
                     DataResponse.Status.LOADING -> {
-                        AppUtils.showProgressDialog(this, false)
+                        AppUtils.showProgressDialog(baseContext, false)
                     }
 
                     DataResponse.Status.ERROR -> {
